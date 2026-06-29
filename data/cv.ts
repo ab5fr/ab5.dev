@@ -171,5 +171,15 @@ export const education = [
     location: "Thuwal, Saudi Arabia",
     period: "Completed: Stage 2",
     detail: "Advanced AI coursework and research collaboration",
+    links: [
+      {
+        label: "Stage 1 Badge",
+        url: "https://coursera.org/share/22331d8dac8b5042eb278cecfe72b53c",
+      },
+      {
+        label: "Stage 2 Certificate",
+        url: "/ABDULLAH_ZUHAIR_S_BALILA_KAU - Artificial Intelligence Introduction Stage.pdf",
+      },
+    ],
   },
 ];

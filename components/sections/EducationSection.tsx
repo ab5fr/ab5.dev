@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { GraduationCap } from "lucide-react";
+import { Download, ExternalLink, GraduationCap } from "lucide-react";
 import { education } from "@/data/cv";
 
 export default function EducationSection() {
@@ -35,6 +35,34 @@ export default function EducationSection() {
                 <p className="mt-2 inline-block rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs text-white/80">
                   {item.detail}
                 </p>
+                {item.links && item.links.length > 0 && (
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {item.links.map((link) => {
+                      const isExternal = link.url.startsWith("http");
+                      const href = isExternal
+                        ? link.url
+                        : encodeURI(link.url);
+
+                      return (
+                        <a
+                          key={link.url}
+                          href={href}
+                          {...(isExternal
+                            ? { target: "_blank", rel: "noreferrer" }
+                            : { download: true })}
+                          className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 bg-white/10 px-3 py-1.5 text-xs text-white transition-colors hover:bg-white/15"
+                        >
+                          {isExternal ? (
+                            <ExternalLink size={14} />
+                          ) : (
+                            <Download size={14} />
+                          )}
+                          {link.label}
+                        </a>
+                      );
+                    })}
+                  </div>
+                )}
               </div>
             </div>
           </motion.div>
