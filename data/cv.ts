@@ -14,7 +14,7 @@ export const profile = {
 export const skillGroups = [
   {
     category: "Languages",
-    skills: ["Rust", "Go", "Python", "TypeScript", "JavaScript"],
+    skills: ["Rust", "Go", "Python", "TypeScript", "JavaScript", "Dart", "Flutter"],
   },
   {
     category: "Backend & APIs",
@@ -25,6 +25,8 @@ export const skillGroups = [
       "Next.js",
       "RESTful APIs",
       "Webhooks",
+      "WebSockets",
+      "WebRTC",
     ],
   },
   {
@@ -39,7 +41,7 @@ export const skillGroups = [
   },
   {
     category: "Databases",
-    skills: ["PostgreSQL", "MongoDB", "SurrealDB"],
+    skills: ["PostgreSQL", "MongoDB", "SurrealDB", "SQLite"],
   },
   {
     category: "DevOps",
@@ -108,6 +110,19 @@ export const projects = [
     links: {
       code: "https://github.com/ab5fr/ab5.dev",
       demo: "https://ab5-dev.vercel.app",
+    },
+  },
+  {
+    title: "E2EE P2P Chat (pro-chat)",
+    role: "Full-Stack Developer",
+    highlights: [
+      "Built end-to-end encrypted peer-to-peer chat with Flutter clients and a Go signaling server—the server holds no database and stores no messages.",
+      "Implemented Signal Protocol (libsignal) on-device encryption and WebRTC data channels for direct encrypted message delivery between peers.",
+      "Designed in-memory presence and signaling relay with SQLite local storage, group mesh P2P, and out-of-band safety-number identity verification.",
+    ],
+    tech: ["Flutter", "Dart", "Go", "WebRTC", "Signal Protocol", "SQLite"],
+    links: {
+      code: "https://github.com/ab5fr/pro-chat",
     },
   },
   {

@@ -35,7 +35,7 @@ export default function SectionContent({
       data-section-scroll
       className="flex h-dvh min-h-0 flex-col overflow-y-auto overscroll-y-contain px-5 pb-24 pt-8 [-webkit-overflow-scrolling:touch] md:px-12 md:pb-10 md:pl-24 md:pt-10 lg:px-16 lg:pl-28"
     >
-      <div className="mx-auto flex w-full max-w-5xl flex-col justify-start py-2 md:min-h-full md:justify-center md:py-0">
+      <div className="mx-auto flex w-full max-w-5xl flex-col justify-start py-2 md:py-4">
         {children}
       </div>
     </div>
