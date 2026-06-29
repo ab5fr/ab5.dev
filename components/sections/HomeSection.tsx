@@ -35,7 +35,7 @@ export default function HomeSection() {
 
       <div data-animate className="flex flex-wrap gap-3">
         <motion.a
-          href="/Abdullah_Balila_CV_Clean.pdf"
+          href="/Abdullah_Balila_CV.pdf"
           download
           whileHover={{ scale: 1.03, y: -2 }}
           whileTap={{ scale: 0.97 }}
